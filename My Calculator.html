@@ -1,0 +1,119 @@
+<html>
+<head><title>Calculator</title></head>
+<body bgcolor="black">
+<form name="cal">
+<table align="center" bordercolor="black" bgcolor="black" width="auto">
+<td colspan="4">
+<input type="text" name="t1" value=""
+style="height: 75px; width: 340px; font-size: 25px; text-align: right; color:white; background-color:black;">
+           <tr>
+      <td align="center"><input type="button" name="b1" value="C" onclick="C()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">
+      <td align="center"><input type="button" name="b2" value="%" onclick="percent()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">
+      <td align="center"><input type="button" name="b3" value="Del" onclick="del()" style="height: 80px; width:80px;background-color:black; color:#6338e1; font-size:25px;">   
+      <td align="center"><input type="button" name="b4" value="/" onclick="div()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">
+                 <tr>
+       <td align="center"><input type="button" name="b5" value="1" onclick="a1()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">
+      <td align="center"><input type="button" name="b6" value="2" onclick="a2()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">
+      <td align="center"><input type="button" name="b7" value="3" onclick="a3()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">   
+      <td align="center"><input type="button" name="b8" value="*" onclick="multi()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">
+              <tr>  
+     <td align="center"><input type="button" name="b9" value="4" onclick="a4()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">
+      <td align="center"><input type="button" name="b10" value="5" onclick="a5()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">
+      <td align="center"><input type="button" name="b11" value="6" onclick="a6()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">   
+      <td align="center"><input type="button" name="b12" value="+" onclick="plus()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">     
+       <tr>
+     <td align="center"><input type="button" name="b13" value="7" onclick="a7()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">
+      <td align="center"><input type="button" name="b10" value="8" onclick="a8()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">
+      <td align="center"><input type="button" name="b11" value="9" onclick="a9()" style="height: 80px; width:80px; font-size:25px; color:white; background-color:black;">   
+      <td align="center"><input type="button" name="b12" value="-" onclick="minus()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:50px;">     
+        <tr> 
+      <td align="center"><input type="button" name="b13" value="00" onclick="a00()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">
+      <td align="center"><input type="button" name="b14" value="0" onclick="a0()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">
+      <td align="center"><input type="button" name="b15" value="." onclick="point()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">   
+      <td align="center"><input type="button" name="b16" value="=" onclick="equal()" style="height: 80px; width:80px; background-color:black; color:#6338e1; font-size:25px;">     
+   </table> 
+  </form>
+        <script language="Javascript">
+function C() 
+{
+    document.cal.t1.value=""
+}
+function percent() 
+{
+   document.cal.t1.value=document.cal.t1.value+"%"
+}        
+function del() 
+{
+document.cal.t1.value=(document.cal.t1.value).slice(0,-1)
+} 
+function div()
+{
+   document.cal.t1.value+='/'
+}            
+function a1()
+{
+   document.cal.t1.value=document.cal.t1.value+"1"
+}
+function a2()
+{
+   document.cal.t1.value=document.cal.t1.value+"2"
+}
+function a3()
+{
+   document.cal.t1.value=document.cal.t1.value+"3"
+}
+function plus()
+{
+ document.cal.t1.value+='+'
+}
+function a4()
+{
+   document.cal.t1.value=document.cal.t1.value+"4"
+}
+function a5()
+{
+   document.cal.t1.value=document.cal.t1.value+"5"
+}
+function a6()
+{
+   document.cal.t1.value=document.cal.t1.value+"6"
+}
+function minus()
+{
+   document.cal.t1.value+='-'
+}
+function a7()
+{
+   document.cal.t1.value=document.cal.t1.value+"7"
+}
+function a8()
+{
+   document.cal.t1.value=document.cal.t1.value+"8"
+}
+function a9()
+{
+   document.cal.t1.value=document.cal.t1.value+"9"
+}
+function multi()
+{
+   document.cal.t1.value+='*'
+}
+function a00()
+{
+  document.cal.t1.value=document.cal.t1.value+"00"
+}
+function a0()
+{
+   document.cal.t1.value=document.cal.t1.value+"0"
+}
+function point()
+{
+   document.cal.t1.value=document.cal.t1.value+"."
+}
+function equal()
+{
+document.cal.t1.value=eval(document.cal.t1.value)
+  }
+  </script>
+ </body>
+</html>
